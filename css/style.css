@@ -4,6 +4,65 @@
   box-sizing: border-box;
 }
 body{
-  background-color: lightgreen;
   font-family: 'Lato', sans-serif;
+  background-color: #1E2D3B;
+}
+.container{
+
+}
+header{
+  height: 80px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  padding:0 100px;
+}
+.logo{
+}
+img{
+  height: 100%;
+}
+label, .logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main{
+  /* background-color: pink; */
+  height: 80%;
+  margin: 40px  40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card{
+  width: 200px;
+  background-color: #2E3A46;
+  border-radius: 10px;
+  padding: 20px 25px ;
+  margin-right: 40px;
+  margin-top: 30px;
+  border: 1px solid #fff;
+}
+.img_container{
+  height: 150px;
+  margin-bottom: 10px;
+}
+img{
+  height: 100%;
+  cursor: pointer;
+}
+.content{
+  text-align: center;
+}
+.p_logo{
+  color: red;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+.p_input{
+  color: red;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-right: 10px;
 }

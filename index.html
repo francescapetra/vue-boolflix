@@ -4,10 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous"/>
   <link rel="stylesheet" href="css/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" charset="utf-8"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -15,9 +14,33 @@
 </head>
 <body>
   <div id="root">
+    <div class="container">
+        <header>
+          <div class="logo">
+            <p class="p_logo">Boolflix</p>
+          </div>
+          <label for="">
+            <p class="p_input">selezionare il film</p>
+              <input type="text" name="" value="" placeholder="cerca un film" @keydown.13 ="apiSearch">
+              <button type="button" name="button">Cerca</button>
+          </label>
+        </header>
+        <main>
 
+          <div class="card" v-for="film in films">
+            <div class="img_container">
+              <img :src=" 'https://image.tmdb.org/t/p/w500' + film.poster_path" alt="poster">
+            </div>
+            <div class="content">
+              <h2>{{film.title}}</h2>
+              <p class="p_content">{{film.original_title}}</p>
+              <p class="p_content">{{film.vote_average}}</p>
+              <p class="p_content">{{film.overview}}</p>
+            </div>
+          </div>
+        </main>
   </div>
-
+</div>
   <script src="script/script.js" charset="utf-8"></script>
 
 
