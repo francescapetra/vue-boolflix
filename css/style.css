@@ -7,9 +7,6 @@ body{
   font-family: 'Lato', sans-serif;
   background-color: #1E2D3B;
 }
-.container{
-
-}
 header{
   height: 80px;
   background-color: black;
@@ -18,13 +15,34 @@ header{
   padding:0 100px;
 }
 .logo{
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 }
-img{
+img .logo{
+  height: 100%;
 }
 label, .logo{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+input{
+  padding: 5px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid red;
+  border-radius: 4px;
+}
+i.search{
+  color: #fff;
+  margin-left: 10px;
+  cursor: pointer;
+}
+i.search:hover{
+  color: red;
 }
 main{
   /* background-color: pink; */
@@ -47,10 +65,10 @@ main{
   margin-bottom: 10px;
   cursor: pointer;
 }
-img{
+img.img_card{
   height: 100%;
   width: 100%;
-  object-fit: cover;
+
 }
 .card:hover .img_container{
   display: none;
@@ -91,5 +109,5 @@ color: red;
   color: red;
   text-transform: uppercase;
   font-size: 16px;
-  margin-right: 10px;
+  margin-right: 15px;
 }

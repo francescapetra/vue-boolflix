@@ -17,19 +17,19 @@
     <div class="container">
         <header>
           <div class="logo">
-            <p class="p_logo">Boolflix</p>
+            <img class="logo" src="https://fontmeme.com/permalink/210409/0a43aa36584f2895324a0006b42b5d1a.png" alt="boolflix-font">
           </div>
           <label for="">
-            <p class="p_input">selezionare il film</p>
-              <input type="text" name="" v-model="searchFilm" placeholder="cerca un film" @keydown.13 ="apiSearch">
-              <button type="button" name="button" @click="searchFilm">Cerca</button>
+            <p class="p_input">scegliere il film</p>
+              <input type="text" name="" v-model="searchFilm" placeholder="Cerca un film" @keydown.13 ="apiSearch">
+              <i @click="apiSearch" class=" search fas fa-search"></i>
           </label>
         </header>
         <main>
 
           <div class="card" v-for="film in films" v-show="film.poster_path != null">
             <div class="img_container">
-              <img :src=" 'https://image.tmdb.org/t/p/original' + film.poster_path" alt="poster">
+              <img class="img_card"  :src=" 'https://image.tmdb.org/t/p/original' + film.poster_path" alt="poster">
             </div>
             <div class="content">
               <h2>TITOLO: <span>{{film.title}}</span> </h2>
