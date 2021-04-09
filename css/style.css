@@ -45,6 +45,7 @@ main{
 .img_container{
   height: 100%;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 img{
   height: 100%;
@@ -57,13 +58,14 @@ img{
 .content{
   text-align: center;
   height: 100%;
-  overflow: hidden;
+  overflow: auto;
   color: white;
   text-align: left;
   padding: 5PX;
 }
 .card .content {
 display: none;
+scroll-behavior: auto;
 }
 .card:hover .content{
   display: block

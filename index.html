@@ -22,7 +22,7 @@
           <label for="">
             <p class="p_input">selezionare il film</p>
               <input type="text" name="" v-model="searchFilm" placeholder="cerca un film" @keydown.13 ="apiSearch">
-              <button type="button" name="button">Cerca</button>
+              <button type="button" name="button" @click="searchFilm">Cerca</button>
           </label>
         </header>
         <main>
