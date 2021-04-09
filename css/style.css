@@ -45,13 +45,14 @@ main{
 .img_container{
   height: 100%;
   margin-bottom: 10px;
-  display: none;
 }
 img{
   height: 100%;
   width: 100%;
-  cursor: pointer;
   object-fit: cover;
+}
+.card:hover .img_container{
+  display: none;
 }
 .content{
   text-align: center;
@@ -60,6 +61,12 @@ img{
   color: white;
   text-align: left;
   padding: 5PX;
+}
+.card .content {
+display: none;
+}
+.card:hover .content{
+  display: block
 }
 h2{
 font-size: 16px;
