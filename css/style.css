@@ -37,7 +37,7 @@ main{
 .card{
   width: 250px;
   height: 400px;
-  background-color: #2E3A46;
+  background-color: #000;
   margin-right: 20px;
   margin-top: 30px;
   border: 2px solid #fff;
@@ -45,13 +45,13 @@ main{
 .img_container{
   height: 100%;
   margin-bottom: 10px;
+  display: none;
 }
 img{
   height: 100%;
   width: 100%;
   cursor: pointer;
   object-fit: cover;
-  display: none;
 }
 .content{
   text-align: center;
