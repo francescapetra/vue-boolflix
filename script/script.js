@@ -12,7 +12,7 @@
         axios.get("https://api.themoviedb.org/3/search/movie",{
           params:{
             api_key:"143011c614d2d290369cd7730a404df2",
-            query:"ritorno al futuro",
+            query: this.searchFilm,
             language: "it-IT"
           }
         })
@@ -20,7 +20,8 @@
           const result = request.data.results;
           this.films = result;
           console.log(result);
-        });
+        })
+        this.searchFilm = "";
       }
     },
   }

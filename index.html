@@ -21,21 +21,21 @@
           </div>
           <label for="">
             <p class="p_input">selezionare il film</p>
-              <input type="text" name="" value="" placeholder="cerca un film" @keydown.13 ="apiSearch">
+              <input type="text" name="" v-model="searchFilm" placeholder="cerca un film" @keydown.13 ="apiSearch">
               <button type="button" name="button">Cerca</button>
           </label>
         </header>
         <main>
 
           <div class="card" v-for="film in films">
-            <div class="img_container">
-              <img :src=" 'https://image.tmdb.org/t/p/w500' + film.poster_path" alt="poster">
-            </div>
+            <!-- <div class="img_container">
+              <img :src=" 'https://image.tmdb.org/t/p/original' + film.poster_path" alt="poster">
+            </div> -->
             <div class="content">
-              <h2>{{film.title}}</h2>
-              <p class="p_content">{{film.original_title}}</p>
-              <p class="p_content">{{film.vote_average}}</p>
-              <p class="p_content">{{film.overview}}</p>
+              <h2>TITOLO: <span>{{film.title}}</span> </h2>
+              <p class="p_content">TITOLO ORIGINALE: <span>{{film.original_title}}</span> </p>
+              <p class="p_content">VOTO: <span>{{film.vote_average}}</span> </p>
+              <p class="p_content">OVERVIEW: <span>{{film.overview}}</span> </p>
             </div>
           </div>
         </main>
