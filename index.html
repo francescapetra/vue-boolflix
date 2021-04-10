@@ -28,7 +28,7 @@
         </header>
         <main>
 
-          <div class="card" v-for="(film,index) in films" v-show="film.poster_path != null">
+          <div class="card" v-if="films.length != 0" v-for="(film,index) in films" v-show="film.poster_path != null">
             <div class="img_container">
               <img class="img_card"  :src=" 'https://image.tmdb.org/t/p/original' + film.poster_path" alt="poster">
             </div>

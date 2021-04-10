@@ -12,7 +12,8 @@ header{
   background-color: black;
   display: flex;
   justify-content: space-between;
-  padding:0 100px;
+  padding-right: 100px;
+  padding-left: 80px;
 }
 .logo{
   height: 50px;
