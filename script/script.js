@@ -12,7 +12,9 @@
           params:{
             api_key:"143011c614d2d290369cd7730a404df2",
             query: this.searchFilm,
-            language: "it-IT"
+            language: "it-IT",
+            page: 1,
+            include_adult: false,
           }
         })
         .then((request)=>{

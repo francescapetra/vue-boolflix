@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" charset="utf-8"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-  <title>Prova</title>
+  <title>BOOLFLIX</title>
 </head>
 <body>
   <div id="root">
@@ -28,7 +28,7 @@
         </header>
         <main>
 
-          <div class="card" v-if="films.length" v-for="(film,index) in films" v-show="film.poster_path != null">
+          <div class="card" v-for="(film,index) in films" v-show="film.poster_path != null">
             <div class="img_container">
               <img class="img_card"  :src=" 'https://image.tmdb.org/t/p/original' + film.poster_path" alt="poster">
             </div>

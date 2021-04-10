@@ -99,8 +99,9 @@ span{
   color: #fff;
 }
 .p_content{
-font-size: 16px;
+font-size: 15px;
 color: red;
+margin-top: 10px;
 }
 .p_logo{
   color: red;
