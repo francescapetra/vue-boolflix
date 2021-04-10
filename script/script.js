@@ -8,7 +8,7 @@
     methods: {
       apiSearch:function(){
         console.log("pippo");
-        axios.get("https://api.themoviedb.org/3/search/movie",{
+        axios.get("https://api.themoviedb.org/3/search/multi",{
           params:{
             api_key:"143011c614d2d290369cd7730a404df2",
             query: this.searchFilm,
