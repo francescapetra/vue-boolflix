@@ -103,6 +103,8 @@ span{
 font-size: 15px;
 color: red;
 margin-top: 10px;
+vertical-align: middle;
+
 }
 .p_logo{
   color: red;
@@ -118,4 +120,8 @@ margin-top: 10px;
 .vote-star{
   color: orange;
   margin: 0 5px;
+}
+img.lang_img{
+  vertical-align: middle;
+  margin-left: 5px;
 }

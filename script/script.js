@@ -21,12 +21,12 @@
           const result = request.data.results;
           this.films = result;
           console.log(result);
-          this.filmRate();
+          this.filmRate(this.films);
         })
         this.searchFilm = "";
       },
-      filmRate: function(){
-        this.films.forEach((item, i) => {
+      filmRate(array){
+        array.forEach((item, i) => {
           const vote = (item.vote_average/2);
           let starVote = Math.ceil(vote);
           item.vote_average = starVote;

@@ -36,7 +36,7 @@
               <h2>TITOLO: <span>{{film.title || film.name}}</span></h2>
               <p class="p_content">TITOLO ORIGINALE: <span>{{film.original_title|| film.original_name}}</span> </p>
               <p v-if=" film.original_language == 'en'? film.original_language = 'gb' : film.original_language == 'ja'? film.original_language = 'jp' : film.original_language" class="p_content">LINGUA:
-                <div class="lang_img"><img :src="'https://www.countryflags.io/' + film.original_language + '/flat/64.png'" :alt="film.original_language"></div> </p>
+                <img class="lang_img" :src="'https://www.countryflags.io/' + film.original_language + '/flat/32.png'" :alt="film.original_language"></p>
               <p class="p_content">VOTO: <span><i v-for="index in film.vote_average" class="fas fa-star vote-star"></i></span>
                 <span><i v-for="index in ( 5 - film.vote_average)" class="far fa-star vote-star"></i></span>
               </p>
