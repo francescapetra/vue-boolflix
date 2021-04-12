@@ -27,9 +27,11 @@
       },
       filmRate(array){
         array.forEach((item, i) => {
-          const vote = (item.vote_average/2);
-          let starVote = Math.ceil(vote);
-          item.vote_average = starVote;
+          if (!isNaN(item.vote_average)) {
+            const vote = (item.vote_average/2);
+            let starVote = Math.ceil(vote);
+            item.vote_average = starVote;
+          }
         });
 
       }
