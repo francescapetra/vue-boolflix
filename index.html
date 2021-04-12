@@ -33,7 +33,7 @@
               <img class="img_card"  :src=" 'https://image.tmdb.org/t/p/original' + film.poster_path" alt="poster">
             </div>
             <div class="content">
-              <h2>TITOLO: <span>{{film.title}}</span>{{film.name}} </h2>
+              <h2>TITOLO: <span>{{film.title || film.name}}</span></h2>
               <p class="p_content">TITOLO ORIGINALE: <span>{{film.original_title}}</span> </p>
               <p v-if="film.original_language == 'en'? film.original_language = 'gb': film.original_language" class="p_content">LINGUA: <span>{{film.original_language}}</span>
                 <div class="lang_img"><img :src="'https://www.countryflags.io/' + film.original_language + '/flat/64.png'" alt="bandiera"></div> </p>
