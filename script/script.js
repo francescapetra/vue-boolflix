@@ -4,6 +4,7 @@
     data:{
       films: [],
       searchFilm:"",
+      lang:"",
     },
     methods: {
       apiSearch:function(){
@@ -27,9 +28,15 @@
       },
       filmRate: function(){
         this.films.forEach((item, i) => {
+
+          this.lang = item.original_language;
           const vote = (item.vote_average/2);
           let starVote = Math.ceil(vote);
           item.vote_average = starVote;
+          if (item.original_language == 'en') {
+            this.lang = 'gb';
+          }
+          console.log(this.lang);
         });
 
       }
