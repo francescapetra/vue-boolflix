@@ -19,7 +19,6 @@ header{
   right: 0;
   top:0;
   left:0;
-
 }
 .logo{
   height: 50px;
@@ -64,14 +63,18 @@ main{
   height: 400px;
   background-color: #000;
   margin-right: 20px;
-  margin-top: 70px;
+  margin-top: 40px;
   border: 2px solid #fff;
+}
+.wrap{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 .img_container{
   height: 100%;
   margin-bottom: 10px;
   cursor: pointer;
-
 }
 img.img_card{
   height: 100%;
@@ -108,21 +111,29 @@ display: none;
 }
 .card:hover{
   transform: scale(1.1);
-  transition: 1.5s;
+  transition: 1.2s;
 }
 h2{
-font-size: 16px;
-margin-bottom: 5PX;
-color: red;
+  font-size: 16px;
+  margin-bottom: 5PX;
+  color: red;
+  height: 10px;
+}
+h3{
+  display: block;
+  margin-top: 40px;
+  color: yellow;
+  font-size: 30px;
+  width: 100%;
 }
 span{
   color: #fff;
 }
 .p_content{
-font-size: 15px;
-color: red;
-margin-top: 10px;
-vertical-align: middle;
+  font-size: 15px;
+  color: red;
+  margin-top: 10px;
+  vertical-align: middle;
 }
 .p_logo{
   color: red;
