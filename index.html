@@ -29,14 +29,14 @@
         <main>
           <!--lista popolari  -->
           <section class="popular_list">
-            <h3 v-show="mergedTvFilm.length">POPOLARI IN ITALIA</h3>
+            <h3 v-show="films.length">POPOLARI IN ITALIA</h3>
             <div class="card wrap" v-for="(film,index) in mergedTvFilm" v-if="film.vote_average >=4">
               <div class="img_container">
                 <img class="img_card"  :src="(film.poster_path ? 'https://image.tmdb.org/t/p/original' + film.poster_path : 'img/suburra.jpg')" alt="poster">
               </div>
               <div class="content">
                 <h2>TITOLO: <span>{{film.title||film.name}}</span></h2>
-                <p class="p_content">TITOLO ORIGINALE: <span>{{film.original_title}}</span> </p>
+                <p class="p_content">TITOLO ORIGINALE: <span>{{film.original_title||film.original_name}}</span> </p>
                 <p v-if=" film.original_language == 'en'? film.original_language = 'gb' : film.original_language == 'ja'? film.original_language = 'jp' : film.original_language" class="p_content">LINGUA:
                   <img class="lang_img" :src="'https://www.countryflags.io/' + film.original_language + '/flat/32.png'" :alt="film.original_language"></p>
                 <p class="p_content">VOTO:

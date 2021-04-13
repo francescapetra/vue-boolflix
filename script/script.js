@@ -5,8 +5,8 @@
       api_key:"143011c614d2d290369cd7730a404df2",
       films: [],
       seriesTv:[],
-      searchFilm:"",
       mergedTvFilm:[],
+      searchFilm:"",
     },
     methods: {
       apiSearch:function(){
@@ -53,14 +53,6 @@
             let starVote = Math.ceil(vote);
             item.vote_average = starVote;
           }
-        //   function imageExists(){
-        //
-        //     var http = new XMLHttpRequest();
-        //     http.open('HEAD', image_url, false);
-        //     http.send();
-        //     return http.status != 404;
-        //
-        // }
         });
       }
     },
