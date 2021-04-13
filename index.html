@@ -29,7 +29,7 @@
         <main>
           <!--lista popolari  -->
           <section class="popular_list">
-            <h3 v-show="films.length">POPOLARI IN ITALIA</h3>
+            <h3 v-show="filterMerged(mergedTvFilm)">POPOLARI IN ITALIA</h3>
             <div class="card wrap" v-for="(film,index) in mergedTvFilm" v-if="film.vote_average >=4">
               <div class="img_container">
                 <img class="img_card"  :src="(film.poster_path ? 'https://image.tmdb.org/t/p/original' + film.poster_path : 'img/suburra.jpg')" alt="poster">
@@ -44,6 +44,7 @@
                   </span>
                   <span v-if="film.vote_average"><i v-for="index in ( 5 - film.vote_average)" class="far fa-star vote-star"></i></span>
                 </p>
+                <p class="p_content">GENERE: <span>{{film.type}}</span> </p>
                 <p class="p_content" v-if="film.overview != ''">TRAMA: <span>{{film.overview}}</span> </p>
               </div>
             </div>
@@ -65,6 +66,7 @@
                   </span>
                   <span v-if="film.vote_average"><i v-for="index in ( 5 - film.vote_average)" class="far fa-star vote-star"></i></span>
                 </p>
+                <p class="p_content">GENERE: <span>{{film.type}}</span> </p>
                 <p class="p_content" v-if="film.overview != ''">TRAMA: <span>{{film.overview}}</span> </p>
               </div>
             </div>
@@ -86,6 +88,7 @@
                 </span>
                 <span v-if="series.vote_average"><i v-for="index in ( 5 - series.vote_average)" class="far fa-star vote-star"></i></span>
               </p>
+              <p class="p_content">GENERE: <span>{{series.type}}</span> </p>
               <p class="p_content" v-if="series.overview != ''">TRAMA: <span>{{series.overview}}</span> </p>
             </div>
           </div>

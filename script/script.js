@@ -6,10 +6,13 @@
       films: [],
       seriesTv:[],
       mergedTvFilm:[],
+      movie: "Film",
+      serie:"Serie",
       searchFilm:"",
     },
     methods: {
       apiSearch:function(){
+        this.mergedTvFilm= [];
         console.log(this.searchFilm);
         axios.get("https://api.themoviedb.org/3/search/movie",{
           params:{
@@ -21,10 +24,11 @@
           }
         })
         .then((request)=>{
+
           let result = request.data.results;
           this.films = result;
           this.filmRate(this.films);
-          console.log(result);
+          this.createMergedArray(this.films,this.mergedTvFilm,this.movie);
         })
         axios.get("https://api.themoviedb.org/3/search/tv",{
           params:{
@@ -36,16 +40,14 @@
           }
         })
         .then((request)=>{
+          // this.mergedTvFilm= [];
           let tvResult = request.data.results;
           this.seriesTv = tvResult;
+          this.createMergedArray(this.seriesTv,this.mergedTvFilm,this.serie);
           this.filmRate(this.seriesTv);
-          console.log(tvResult);
-          this.mergedTvFilm = [...this.films, ...this.seriesTv];
-          console.log(this.mergedTvFilm);
         })
         this.searchFilm = "";
       },
-
       filmRate(array){
         array.forEach((item, i) => {
           if (!isNaN(item.vote_average)) {
@@ -54,6 +56,22 @@
             item.vote_average = starVote;
           }
         });
+      },
+      createMergedArray: function(array,array2,genere){
+        console.log("volta");
+        array.forEach((item, i) => {
+          item['type'] = genere;
+          array2.push(item);
+        });
+      },
+      filterMerged: function(array){
+        let popular = false;
+        array.forEach((item, i) => {
+           if(item.vote_average>=4){
+             popular = true;
+           }
+        });
+        return popular;
       }
     },
   }
