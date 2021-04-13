@@ -42,6 +42,7 @@
               </span>
               <span v-if="film.vote_average"><i v-for="index in ( 5 - film.vote_average)" class="far fa-star vote-star"></i></span>
               </p>
+              <p class="p_content" v-if="film.overview != ''">TRAMA: <span>{{film.overview}}</span> </p>
             </div>
           </div>
 
