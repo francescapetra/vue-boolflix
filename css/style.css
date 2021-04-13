@@ -19,6 +19,7 @@ header{
   right: 0;
   top:0;
   left:0;
+  z-index: 10;
 }
 .logo{
   height: 50px;
@@ -26,6 +27,7 @@ header{
   justify-content: center;
   align-items: center;
   margin-top: 10px;
+  cursor: pointer;
 }
 img .logo{
   height: 100%;
@@ -107,7 +109,7 @@ img.img_card{
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  background: red;
+  background: #e10000;
   border-radius: 10px;
 }
 .card .content {
@@ -130,8 +132,10 @@ h3{
   display: block;
   margin-top: 40px;
   color: #fff;
-  font-size: 30px;
+  font-size: 26px;
   width: 100%;
+  text-shadow: 2px 2px #000;
+  cursor: pointer;
 }
 span{
   color: #fff;
