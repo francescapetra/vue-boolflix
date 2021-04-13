@@ -6,6 +6,7 @@
       films: [],
       seriesTv:[],
       searchFilm:"",
+      mergedTvFilm:[],
     },
     methods: {
       apiSearch:function(){
@@ -39,6 +40,8 @@
           this.seriesTv = tvResult;
           this.filmRate(this.seriesTv);
           console.log(tvResult);
+          this.mergedTvFilm = [...this.films, ...this.seriesTv];
+          console.log(this.mergedTvFilm);
         })
         this.searchFilm = "";
       },
