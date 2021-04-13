@@ -29,7 +29,7 @@
         <main>
 <!--  -->
           <h3 v-if="films.length">FILM</h3>
-          <div class="card wrap" v-if="film.media_type == 'movie' " v-for="(film,index) in films">
+          <div class="card wrap" v-for="(film,index) in films">
             <div class="img_container">
               <img class="img_card"  :src="(film.poster_path ? 'https://image.tmdb.org/t/p/original' + film.poster_path : 'img/suburra.jpg')" alt="poster">
             </div>
@@ -48,7 +48,7 @@
           </div>
         <!-- stop -->
           <h3 v-if="films.length">SERIE TV</h3>
-          <div class="card wrap" v-if="series.media_type == 'tv' " v-for="(series,index) in films">
+          <div class="card wrap" v-for="(series,index) in seriesTv">
             <div class="img_container">
               <img class="img_card"  :src="(series.poster_path ? 'https://image.tmdb.org/t/p/original' + series.poster_path : 'img/suburra.jpg')" alt="poster">
             </div>
