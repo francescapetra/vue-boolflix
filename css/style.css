@@ -53,10 +53,10 @@ i.search:hover{
 main{
   /* background-color: pink; */
   height: 80%;
-  margin: 40px  40px;
+  margin: 40px 0 40px 100px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .card{
   width: 250px;
