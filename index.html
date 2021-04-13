@@ -29,16 +29,16 @@
         <main>
           <!--lista popolari  -->
           <section class="popular_list">
-            <h3 v-show="filterMerged(mergedTvFilm)">POPOLARI IN ITALIA</h3>
+            <h2 v-show="filterMerged(mergedTvFilm)">POPOLARI IN ITALIA</h2>
             <div class="card wrap" v-for="(film,index) in mergedTvFilm" v-if="film.vote_average >=4">
               <div class="img_container">
                 <img class="img_card"  :src="(film.poster_path ? 'https://image.tmdb.org/t/p/original' + film.poster_path : 'img/suburra.jpg')" alt="poster">
               </div>
               <div class="content">
-                <h2>TITOLO: <span>{{film.title||film.name}}</span></h2>
+                <h3>TITOLO: <span>{{film.title||film.name}}</span></h3>
                 <p class="p_content">TITOLO ORIGINALE: <span>{{film.original_title||film.original_name}}</span> </p>
-                <p v-if=" film.original_language == 'en'? film.original_language = 'gb' : film.original_language == 'ja'? film.original_language = 'jp' : film.original_language" class="p_content">LINGUA:
-                  <img class="lang_img" :src="'https://www.countryflags.io/' + film.original_language + '/flat/32.png'" :alt="film.original_language"></p>
+                <p class="p_content">LINGUA:
+                  <img class="lang_img" :src="'flags/' + film.original_language + '.svg'" :alt="film.original_language"></p>
                 <p class="p_content">VOTO:
                   <span><i v-for="index in film.vote_average" class="fas fa-star vote-star"></i>
                   </span>
@@ -51,16 +51,16 @@
           </section>
           <!-- film -->
           <section class="movie_list">
-            <h3 v-if="films.length">FILM</h3>
+            <h2 v-if="films.length">FILM</h2>
             <div class="card wrap" v-for="(film,index) in films">
               <div class="img_container">
                 <img class="img_card"  :src="(film.poster_path ? 'https://image.tmdb.org/t/p/original' + film.poster_path : 'img/suburra.jpg')" alt="poster">
               </div>
               <div class="content">
-                <h2>TITOLO: <span>{{film.title}}</span></h2>
+                <h3>TITOLO: <span>{{film.title}}</span></h3>
                 <p class="p_content">TITOLO ORIGINALE: <span>{{film.original_title}}</span> </p>
-                <p v-if=" film.original_language == 'en'? film.original_language = 'gb' : film.original_language == 'ja'? film.original_language = 'jp' : film.original_language" class="p_content">LINGUA:
-                  <img class="lang_img" :src="'https://www.countryflags.io/' + film.original_language + '/flat/32.png'" :alt="film.original_language"></p>
+                <p class="p_content">LINGUA:
+                    <img class="lang_img" :src="'flags/' + film.original_language + '.svg'" :alt="film.original_language"></p>
                 <p class="p_content">VOTO:
                   <span><i v-for="index in film.vote_average" class="fas fa-star vote-star"></i>
                   </span>
@@ -73,16 +73,16 @@
           </section>
           <!-- serie -->
           <section class="series_list">
-          <h3 v-if="seriesTv.length">SERIE TV</h3>
+          <h2 v-if="seriesTv.length">SERIE TV</h2>
           <div class="card wrap" v-for="(series,index) in seriesTv">
             <div class="img_container">
               <img class="img_card"  :src="(series.poster_path ? 'https://image.tmdb.org/t/p/original' + series.poster_path : 'img/suburra.jpg')" alt="poster">
             </div>
             <div class="content">
-              <h2>TITOLO: <span>{{series.name}}</span></h2>
+              <h3>TITOLO: <span>{{series.name}}</span></h3>
               <p class="p_content">TITOLO ORIGINALE: <span>{{series.original_name}}</span> </p>
-              <p v-if=" series.original_language == 'en'? series.original_language = 'gb' : series.original_language == 'ja'? series.original_language = 'jp' : series.original_language" class="p_content">LINGUA:
-                <img class="lang_img" :src="'https://www.countryflags.io/' + series.original_language + '/flat/32.png'" :alt="series.original_language"></p>
+              <p class="p_content">LINGUA:
+                <img class="lang_img" :src="('flags/' + series.original_language + '.svg')" :alt="series.original_language"></p>
               <p class="p_content">VOTO:
                 <span><i v-for="index in series.vote_average" class="fas fa-star vote-star"></i>
                 </span>
