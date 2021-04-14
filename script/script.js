@@ -7,7 +7,7 @@
       seriesTv:[],
       mergedTvFilm:[],
       movie: "Film",
-      serie:"Serie",
+      tv:"Serie",
       searchFilm:"",
     },
     methods: {
@@ -43,7 +43,7 @@
           // this.mergedTvFilm= [];
           let tvResult = request.data.results;
           this.seriesTv = tvResult;
-          this.createMergedArray(this.seriesTv,this.mergedTvFilm,this.serie);
+          this.createMergedArray(this.seriesTv,this.mergedTvFilm,this.tv);
           this.filmRate(this.seriesTv);
         })
         this.searchFilm = "";
@@ -57,10 +57,10 @@
           }
         });
       },
-      createMergedArray: function(array,array2,genere){
+      createMergedArray: function(array,array2,genre){
         console.log("volta");
         array.forEach((item, i) => {
-          item['type'] = genere;
+          item['type'] = genre;
           array2.push(item);
         });
       },
